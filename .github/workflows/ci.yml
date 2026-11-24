@@ -52,7 +52,7 @@ jobs:
         if: success() && github.event_name == 'push'
         env:
           GH_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
-          PROJECT_OWNER: cagatay-unal
+          PROJECT_OWNER: "@me"
           PROJECT_NUMBER: "13"
         run: |
           set -e
@@ -94,3 +94,12 @@ jobs:
             --format json
 
           echo "Successfully moved $TASK_ID to Done."
+
+          echo "Authenticated user:"
+          gh api user --jq .login
+
+          echo "Available projects:"
+          gh project list --owner "@me" --format json
+
+          echo "Project fields:"
+          gh project field-list 13 --owner "@me" --format json
