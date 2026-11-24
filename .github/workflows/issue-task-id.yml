@@ -1,0 +1,33 @@
+name: Assign Task ID
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  assign-task-id:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Assign task ID to issue title
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+
+            const cleanTitle = issue.title.replace(
+              /^\[TASK-\d+\]\s*/,
+              ''
+            );
+
+            const newTitle = `[TASK-${issue.number}] ${cleanTitle}`;
+
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              title: newTitle
+            });
