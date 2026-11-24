@@ -1,13 +1,16 @@
 name: Babel UI Web CI
+
 on:
   pull_request:
   push:
     branches:
       - main
+
 jobs:
   check:
     name: Quality Checks
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -42,3 +45,40 @@ jobs:
 
       - name: Build Storybook
         run: pnpm build-storybook
+
+      - name: Move GitHub Project task to Done
+        if: success() && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
+          PROJECT_OWNER: cagatay-unal
+          PROJECT_NUMBER: "13"
+        run: |
+          TASK_ID=$(git log -1 --pretty=%B | grep -oE 'TASK-[0-9]+' | head -n 1)
+
+          if [ -z "$TASK_ID" ]; then
+            echo "No TASK ID found. Skipping."
+            exit 0
+          fi
+
+          echo "Found task: $TASK_ID"
+
+          ISSUE_URL=$(gh issue list \
+            --repo "$GITHUB_REPOSITORY" \
+            --state all \
+            --search "$TASK_ID in:title" \
+            --json title,url \
+            --jq ".[] | select(.title | startswith(\"[$TASK_ID]\")) | .url" \
+            | head -n 1)
+
+          if [ -z "$ISSUE_URL" ]; then
+            echo "Issue not found: $TASK_ID"
+            exit 1
+          fi
+
+          gh project item-edit "$PROJECT_NUMBER" \
+            --owner "$PROJECT_OWNER" \
+            --url "$ISSUE_URL" \
+            --field "Status" \
+            --value "Done"
+
+          echo "$TASK_ID moved to Done."
