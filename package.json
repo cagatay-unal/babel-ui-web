@@ -9,7 +9,7 @@
     "**/*.css"
   ],
   "engines": {
-    "node": ">=22.13"
+    "node": ">=24"
   },
   "packageManager": "pnpm@12.23.0",
   "scripts": {
