@@ -1,0 +1,4 @@
+:root {
+  --token-color-primary: var(--orange);
+  --token-color-secondary: var(--red);
+}

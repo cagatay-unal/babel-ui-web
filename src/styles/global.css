@@ -1,0 +1,7 @@
+@import "./tokens/colors.css";
+@import "./tokens/semantic.css";
+@import "./tokens/themes.css";
+
+@theme inline {
+  --color-primary: var(--token-color-primary);
+}

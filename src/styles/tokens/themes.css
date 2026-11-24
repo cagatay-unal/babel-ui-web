@@ -1,0 +1,7 @@
+[data-brand="xbrand"] {
+  --token-color-primary: var(--red);
+}
+
+[data-theme="dark"] {
+  --token-color-primary: var(--blue);
+}

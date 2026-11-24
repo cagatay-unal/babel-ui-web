@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "../src/styles/global.css";
+@source "../src";
+
+@layer base {
+  body {
+    background-color: var(--ds-surface);
+    color: var(--ds-text);
+  }
+}
