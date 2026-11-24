@@ -94,12 +94,3 @@ jobs:
             --format json
 
           echo "Successfully moved $TASK_ID to Done."
-
-          echo "Authenticated user:"
-          gh api user --jq .login
-
-          echo "Available projects:"
-          gh project list --owner "@me" --format json
-
-          echo "Project fields:"
-          gh project field-list 13 --owner "@me" --format json
