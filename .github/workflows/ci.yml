@@ -1,4 +1,4 @@
-name: ci
+name: Babel UI Web CI
 on:
   pull_request:
   push:
