@@ -53,6 +53,8 @@ jobs:
           PROJECT_OWNER: cagatay-unal
           PROJECT_NUMBER: "13"
         run: |
+          set -x
+
           TASK_ID=$(git log -1 --pretty=%B | grep -oE 'TASK-[0-9]+' | head -n 1)
 
           if [ -z "$TASK_ID" ]; then
@@ -62,23 +64,16 @@ jobs:
 
           echo "Found task: $TASK_ID"
 
-          ISSUE_URL=$(gh issue list \
+          echo "Checking GitHub CLI..."
+          gh --version
+
+          echo "Searching issue..."
+
+          gh issue list \
             --repo "$GITHUB_REPOSITORY" \
             --state all \
             --search "$TASK_ID in:title" \
-            --json title,url \
-            --jq ".[] | select(.title | startswith(\"[$TASK_ID]\")) | .url" \
-            | head -n 1)
+            --limit 100 \
+            --json title,url
 
-          if [ -z "$ISSUE_URL" ]; then
-            echo "Issue not found: $TASK_ID"
-            exit 1
-          fi
-
-          gh project item-edit "$PROJECT_NUMBER" \
-            --owner "$PROJECT_OWNER" \
-            --url "$ISSUE_URL" \
-            --field "Status" \
-            --value "Done"
-
-          echo "$TASK_ID moved to Done."
+          echo "Issue search completed."
