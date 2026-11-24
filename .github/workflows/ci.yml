@@ -10,6 +10,7 @@ jobs:
   check:
     name: Quality Checks
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -30,6 +31,7 @@ jobs:
         run: |
           node --version
           pnpm --version
+          gh --version
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -53,9 +55,9 @@ jobs:
           PROJECT_OWNER: cagatay-unal
           PROJECT_NUMBER: "13"
         run: |
-          set -x
+          set -e
 
-          TASK_ID=$(git log -1 --pretty=%B | grep -oE 'TASK-[0-9]+' | head -n 1)
+          TASK_ID=$(git log -1 --pretty=%B | grep -oE 'TASK-[0-9]+' | head -n 1 || true)
 
           if [ -z "$TASK_ID" ]; then
             echo "No TASK ID found. Skipping."
@@ -64,16 +66,31 @@ jobs:
 
           echo "Found task: $TASK_ID"
 
-          echo "Checking GitHub CLI..."
-          gh --version
+          echo "Searching GitHub Issue..."
 
-          echo "Searching issue..."
-
-          gh issue list \
+          ISSUE_URL=$(gh issue list \
             --repo "$GITHUB_REPOSITORY" \
             --state all \
             --search "$TASK_ID in:title" \
             --limit 100 \
-            --json title,url
+            --json title,url \
+            --jq ".[] | select(.title | contains(\"$TASK_ID\")) | .url" \
+            | head -n 1)
 
-          echo "Issue search completed."
+          if [ -z "$ISSUE_URL" ]; then
+            echo "Issue not found: $TASK_ID"
+            exit 1
+          fi
+
+          echo "Found Issue: $ISSUE_URL"
+
+          echo "Updating Project status..."
+
+          gh project item-edit "$PROJECT_NUMBER" \
+            --owner "$PROJECT_OWNER" \
+            --url "$ISSUE_URL" \
+            --field "Status" \
+            --value "Done" \
+            --format json
+
+          echo "Successfully moved $TASK_ID to Done."
