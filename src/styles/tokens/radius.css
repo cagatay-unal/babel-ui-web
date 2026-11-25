@@ -1,0 +1,7 @@
+:root {
+  --base-radius-none: 0;
+  --base-radius-sm: 0.5rem;
+  --base-radius-md: 0.75rem;
+  --base-radius-lg: 1rem;
+  --base-radius-xl: 1.5rem;
+}

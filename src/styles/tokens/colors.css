@@ -1,5 +1,83 @@
 :root {
-  --blue: #432dd7;
-  --red: #e7000b;
-  --orange: #ff6900;
+  /* Neutral */
+  --white: #ffffff;
+  --gray-50: #f3f6fd;
+  --gray-100: #eef1fa;
+  --gray-200: #e2e7f3;
+  --gray-300: #cbd1e0;
+  --gray-400: #a6acbd;
+  --gray-500: #84899b;
+  --gray-600: #626778;
+  --gray-700: #464950;
+  --gray-800: #2c2e35;
+  --gray-900: #14151c;
+  --gray-950: #0a0a12;
+  --cream-100: #fef2dd;
+  --cream-200: #fbeed4;
+
+  /* Orange */
+  --orange-50: #feeede;
+  --orange-100: #fee5d6;
+  --orange-200: #ffcfb3;
+  --orange-300: #feb385;
+  --orange-400: #fe9b59;
+  --orange-500: #ff7f06;
+  --orange-600: #d86a01;
+  --orange-700: #b15601;
+  --orange-800: #8c4200;
+  --orange-900: #693000;
+
+  /* Green */
+  --green-50: #e5f7e8;
+  --green-100: #d4f3d9;
+  --green-200: #afe7ba;
+  --green-300: #84d797;
+  --green-400: #56cb77;
+  --green-500: #12bd5a;
+  --green-600: #019f49;
+  --green-700: #00823b;
+  --green-800: #02662d;
+  --green-900: #004c1f;
+
+  /* Blue */
+  --blue-50: #f3f7fe;
+  --blue-100: #d1e1ff;
+  --blue-200: #a4c3fe;
+  --blue-300: #6b9cfe;
+  --blue-400: #3e7afc;
+  --blue-500: #1355f0;
+  --blue-600: #0241d6;
+  --blue-700: #0033b1;
+  --blue-800: #01278a;
+  --blue-900: #011c66;
+
+  /* Purple */
+  --purple-50: #f7f5ff;
+  --purple-100: #e5defe;
+  --purple-200: #cebeff;
+  --purple-300: #b294ff;
+  --purple-400: #9f6eff;
+  --purple-500: #8b47f5;
+  --purple-600: #7730d9;
+  --purple-700: #6124b4;
+  --purple-800: #4b1c8d;
+  --purple-900: #361567;
+
+  /* Red */
+  --red-50: #fef4f3;
+  --red-100: #ffdad4;
+  --red-200: #feb7ab;
+  --red-300: #fe8573;
+  --red-400: #fa5644;
+  --red-500: #ec1408;
+  --red-600: #c80700;
+  --red-700: #a50300;
+  --red-800: #830000;
+  --red-900: #620000;
+
+  /* Amber */
+  --amber-50: #fffbeb;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-800: #92400e;
 }

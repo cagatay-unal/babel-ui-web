@@ -1,0 +1,22 @@
+:root {
+  --base-font-family-sans: ui-sans-serif, system-ui, sans-serif, Arial, Helvetica, sans-serif;
+
+  --base-font-size: 16px;
+  --base-font-size-xs: 0.75rem;
+  --base-font-size-sm: 0.875rem;
+  --base-font-size-md: 1rem;
+  --base-font-size-lg: 1.125rem;
+  --base-font-size-xl: 1.25rem;
+  --base-font-size-2xl: 1.5rem;
+  --base-font-size-3xl: 1.875rem;
+  --base-font-size-4xl: 2.25rem;
+
+  --base-font-weight-regular: 400;
+  --base-font-weight-medium: 500;
+  --base-font-weight-semibold: 600;
+  --base-font-weight-bold: 700;
+
+  --base-line-height-tight: 1.25;
+  --base-line-height-normal: 1.5;
+  --base-line-height-relaxed: 1.75;
+}

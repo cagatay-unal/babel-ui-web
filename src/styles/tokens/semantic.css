@@ -1,4 +1,81 @@
 :root {
-  --token-color-primary: var(--orange);
-  --token-color-secondary: var(--red);
+  /* Primary */
+  --token-color-primary: var(--orange-500);
+  --token-color-primary-light: var(--orange-50);
+  --token-color-primary-dark: var(--orange-600);
+  --token-color-on-primary: var(--gray-950);
+  --token-color-on-primary-light: var(--orange-800);
+  --token-color-on-primary-dark: var(--white);
+
+  /* Secondary */
+  --token-color-secondary: var(--purple-500);
+  --token-color-secondary-light: var(--purple-50);
+  --token-color-secondary-dark: var(--purple-600);
+  --token-color-on-secondary: var(--gray-50);
+  --token-color-on-secondary-light: var(--purple-800);
+  --token-color-on-secondary-dark: var(--white);
+
+  --token-color-background: var(--gray-50);
+
+  --token-color-foreground: var(--gray-900);
+  --token-color-foreground-muted: var(--gray-600);
+
+  --token-color-border: var(--gray-200);
+  --token-color-border-strong: var(--gray-500);
+
+  /* Success */
+  --token-color-success: var(--green-500);
+  --token-color-success-light: var(--green-50);
+  --token-color-success-dark: var(--green-600);
+  --token-color-on-success: var(--gray-950);
+  --token-color-on-success-light: var(--green-800);
+
+  /* Info */
+  --token-color-info: var(--blue-500);
+  --token-color-info-light: var(--blue-50);
+  --token-color-info-dark: var(--blue-600);
+  --token-color-on-info: var(--white);
+  --token-color-on-info-light: var(--blue-800);
+
+  /* Warning */
+  --token-color-warning: var(--amber-500);
+  --token-color-warning-light: var(--amber-50);
+  --token-color-warning-dark: var(--amber-600);
+  --token-color-on-warning: var(--gray-950);
+  --token-color-on-warning-light: var(--amber-800);
+
+  /* Danger */
+  --token-color-danger: var(--red-500);
+  --token-color-danger-light: var(--red-50);
+  --token-color-danger-dark: var(--red-600);
+  --token-color-on-danger: var(--white);
+  --token-color-on-danger-light: var(--red-700);
+
+  --token-radius-none: var(--base-radius-none);
+  --token-radius-sm: var(--base-radius-sm);
+  --token-radius-md: var(--base-radius-md);
+  --token-radius-lg: var(--base-radius-lg);
+  --token-radius-xl: var(--base-radius-xl);
+
+  --token-shadow-card: var(--shadow-card);
+
+  --token-font-family-sans: var(---base-font-family-sans);
+  --token-font-size: var(--base-font-size);
+  --token-font-size-xs: var(--base-font-size-xs);
+  --token-font-size-sm: var(--base-font-size-sm);
+  --token-font-size-md: var(--base-font-size-md);
+  --token-font-size-lg: var(--base-font-size-lg);
+  --token-font-size-xl: var(--base-font-size-xl);
+  --token-font-size-2xl: var(--base-font-size-2xl);
+  --token-font-size-3xl: var(--base-font-size-3xl);
+  --token-font-size-4xl: var(--base-font-size-4xl);
+
+  --token-font-weight-regular: var(--base-font-weight-regular);
+  --token-font-weight-medium: var(--base-font-weight-medium);
+  --token-font-weight-semibold: var(--base-font-weight-semibold);
+  --token-font-weight-bold: var(--base-font-weight-bold);
+
+  --token-line-height-tight: var(--base-line-height-tight);
+  --token-line-height-normal: var(--base-line-height-normal);
+  --token-line-height-relaxed: var(--base-line-height-relaxed);
 }
