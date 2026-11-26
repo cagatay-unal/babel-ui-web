@@ -5,7 +5,7 @@
   --token-color-primary-dark: var(--orange-600);
   --token-color-on-primary: var(--gray-950);
   --token-color-on-primary-light: var(--orange-800);
-  --token-color-on-primary-dark: var(--white);
+  --token-color-on-primary-dark: var(--gray-950);
 
   /* Secondary */
   --token-color-secondary: var(--purple-500);
@@ -57,10 +57,9 @@
   --token-radius-lg: var(--base-radius-lg);
   --token-radius-xl: var(--base-radius-xl);
 
-  --token-shadow-card: var(--shadow-card);
+  --token-shadow-card: var(--base-shadow-card);
 
-  --token-font-family-sans: var(---base-font-family-sans);
-  --token-font-size: var(--base-font-size);
+  --token-font-family-sans: var(--base-font-family-sans);
   --token-font-size-xs: var(--base-font-size-xs);
   --token-font-size-sm: var(--base-font-size-sm);
   --token-font-size-md: var(--base-font-size-md);

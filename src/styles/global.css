@@ -1,5 +1,6 @@
 @import "./tokens/colors.css";
 @import "./tokens/radius.css";
+@import "./tokens/shadow.css";
 @import "./tokens/typography.css";
 @import "./tokens/semantic.css";
 @import "./tokens/themes.css";
@@ -51,31 +52,29 @@
   --color-on-danger: var(--token-color-on-danger);
   --color-on-danger-light: var(--token-color-on-danger-light);
 
-  --rounded-none: var(--token-radius-none);
-  --rounded-sm: var(--token-radius-sm);
-  --rounded-md: var(--token-radius-md);
-  --rounded-lg: var(--token-radius-lg);
-  --rounded-xl: var(--token-radius-xl);
+  --radius-sm: var(--token-radius-sm);
+  --radius-md: var(--token-radius-md);
+  --radius-lg: var(--token-radius-lg);
+  --radius-xl: var(--token-radius-xl);
 
   --shadow-card: var(--token-shadow-card);
 
-  --font-family-sans: var(---token-font-family-sans);
-  --font-base: var(--token-font-size);
-  --font-xs: var(--token-font-size-xs);
-  --font-sm: var(--token-font-size-sm);
-  --font-md: var(--token-font-size-md);
-  --font-lg: var(--token-font-size-lg);
-  --font-xl: var(--token-font-size-xl);
-  --font-2xl: var(--token-font-size-2xl);
-  --font-3xl: var(--token-font-size-3xl);
-  --font-4xl: var(--token-font-size-4xl);
+  --font-sans: var(--token-font-family-sans);
+  --text-xs: var(--token-font-size-xs);
+  --text-sm: var(--token-font-size-sm);
+  --text-base: var(--token-font-size-md);
+  --text-lg: var(--token-font-size-lg);
+  --text-xl: var(--token-font-size-xl);
+  --text-2xl: var(--token-font-size-2xl);
+  --text-3xl: var(--token-font-size-3xl);
+  --text-4xl: var(--token-font-size-4xl);
 
-  --font-regular: var(--token-font-weight-regular);
-  --font-medium: var(--token-font-weight-medium);
-  --font-semibold: var(--token-font-weight-semibold);
-  --font-bold: var(--token-font-weight-bold);
+  --font-weight-regular: var(--token-font-weight-regular);
+  --font-weight-medium: var(--token-font-weight-medium);
+  --font-weight-semibold: var(--token-font-weight-semibold);
+  --font-weight-bold: var(--token-font-weight-bold);
 
-  --line-height-tight: var(--token-line-height-tight);
-  --line-height-normal: var(--token-line-height-normal);
-  --line-height-relaxed: var(--token-line-height-relaxed);
+  --leading-tight: var(--token-line-height-tight);
+  --leading-normal: var(--token-line-height-normal);
+  --leading-relaxed: var(--token-line-height-relaxed);
 }

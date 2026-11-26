@@ -11,7 +11,7 @@ const preview: Preview = {
       description: "Marka Seçimi",
       toolbar: {
         title: "Marka",
-        icon: "paintbrush",
+        icon: "flag",
         dynamicTitle: true,
         items: [
           { value: "default", title: "Default Brand" },
@@ -20,14 +20,14 @@ const preview: Preview = {
       },
     },
     mode: {
-      description: "Açık / koyu",
+      description: "Light / Dark",
       toolbar: {
         title: "Tema",
-        icon: "moon",
+        icon: "sun",
         dynamicTitle: true,
         items: [
-          { value: "light", title: "Açık" },
-          { value: "dark", title: "Koyu" },
+          { value: "light", icon: "sun", title: "Light" },
+          { value: "dark", icon: "moon", title: "Dark" },
         ],
       },
     },
