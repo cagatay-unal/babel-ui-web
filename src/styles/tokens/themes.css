@@ -1,7 +1,11 @@
 [data-brand="xbrand"] {
-  --token-color-primary: var(--red);
+  --token-color-primary: var(--x-brand-color-green);
+  --token-color-primary-light: var(--x-brand-color-green-light);
+  --token-color-primary-dark: var(--x-brand-color-green-dark);
 }
 
 [data-theme="dark"] {
-  --token-color-primary: var(--blue);
+  --token-color-background: var(--gray-950);
+  --token-color-foreground: var(--gray-50);
+  --token-color-foreground-muted: var(--gray-400);
 }

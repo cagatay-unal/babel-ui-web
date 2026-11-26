@@ -2,6 +2,7 @@
 @import "./tokens/radius.css";
 @import "./tokens/shadow.css";
 @import "./tokens/typography.css";
+@import "./tokens/x-brand-colors.css";
 @import "./tokens/semantic.css";
 @import "./tokens/themes.css";
 
@@ -23,7 +24,7 @@
   --color-background: var(--token-color-background);
 
   --color-foreground: var(--token-color-foreground);
-  --color-muted-foreground: var(--token-color-foreground-muted);
+  --color-foreground-muted: var(--token-color-foreground-muted);
 
   --color-border: var(--token-color-border);
   --color-border-strong: var(--token-color-border-strong);

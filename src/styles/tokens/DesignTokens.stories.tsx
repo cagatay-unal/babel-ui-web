@@ -25,7 +25,7 @@ const colors = [
   {
     name: "Primary Dark",
     variable: "--token-color-primary-dark",
-    className: "bg-primary-light",
+    className: "bg-primary-dark",
   },
   {
     name: "Secondary",
@@ -121,9 +121,9 @@ const colors = [
 
 export const Colors: Story = {
   render: () => (
-    <div className="space-y-8 p-8">
+    <div className="space-y-8 bg-background p-8">
       <div>
-        <h2 className="mb-2 text-2xl font-semibold">Colors</h2>
+        <h2 className="mb-2 text-2xl font-semibold text-foreground">Colors</h2>
         <p className="text-foreground-muted">All color tokens</p>
       </div>
 
@@ -131,9 +131,9 @@ export const Colors: Story = {
         {colors.map((color) => (
           <div key={color.variable} className="mb-8 overflow-hidden rounded-lg shadow-lg">
             <div className={`h-36 ${color.className}`} />
-            <div className="space-y-1 p-4">
-              <p className="font-bold text-foreground">{color.name}</p>
-              <code className="text-foreground-muted text-sm">{color.variable}</code>
+            <div className="space-y-1 bg-white p-4">
+              <p className="font-bold">{color.name}</p>
+              <code className="text-sm">{color.variable}</code>
             </div>
           </div>
         ))}
