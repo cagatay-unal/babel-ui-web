@@ -12,7 +12,11 @@
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "noEmit": true
+    "noEmit": true,
+    // Path alias
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src", ".storybook/**/*", "*.config.ts", "vitest.setup.ts"]
 }

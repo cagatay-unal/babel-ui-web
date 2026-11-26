@@ -1,2 +1,3 @@
+pnpm icons:generate
 pnpm lint-staged
 pnpm test:all
