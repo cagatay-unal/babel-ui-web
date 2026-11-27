@@ -8,6 +8,7 @@ const meta = {
     layout: "fullscreen",
   },
   component: Icon,
+  tags: ["autodocs"],
 } satisfies Meta<typeof Icon>;
 
 export default meta;
