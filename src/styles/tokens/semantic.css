@@ -16,6 +16,7 @@
   --token-color-on-secondary-dark: var(--white);
 
   --token-color-background: var(--gray-50);
+  --token-color-skeleton-background: var(--skeleton-light);
 
   --token-color-foreground: var(--gray-900);
   --token-color-foreground-muted: var(--gray-600);

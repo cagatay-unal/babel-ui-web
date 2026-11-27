@@ -22,6 +22,7 @@
   --color-on-secondary-dark: var(--token-color-on-secondary-dark);
 
   --color-background: var(--token-color-background);
+  --color-skeleton-background: var(--token-color-skeleton-background);
 
   --color-foreground: var(--token-color-foreground);
   --color-foreground-muted: var(--token-color-foreground-muted);

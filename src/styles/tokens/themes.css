@@ -6,6 +6,7 @@
 
 [data-theme="dark"] {
   --token-color-background: var(--gray-950);
+  --token-color-skeleton-background: var(--skeleton-dark);
   --token-color-foreground: var(--gray-50);
   --token-color-foreground-muted: var(--gray-400);
 }
